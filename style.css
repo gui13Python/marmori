@@ -1,0 +1,497 @@
+/* Basic Reset & Defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fdfdfd; /* Very light grey background */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 0.8rem;
+    color: #2c3e50; /* Dark blue-grey for headings */
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: #8e44ad; /* A refined purple */
+}
+
+a:hover {
+    color: #5e2b75;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Utility Classes */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    overflow: hidden; /* Clear floats */
+}
+
+
+.container p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5e2b75;
+}
+
+.section-padding {
+    padding: 60px 0;
+}
+
+.bg-light {
+    background-color: #f4f4f4; /* Slightly darker grey for contrast */
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+    margin: 5px;
+}
+
+.btn-primary {
+    background-color: #8e44ad; /* Refined purple */
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #5e2b75;
+}
+
+.btn-secondary {
+    background-color: #3498db; /* Complementary blue */
+    color: #fff;
+}
+.btn-secondary:hover {
+    background-color: #2980b9;
+}
+
+.cta-text {
+    font-style: italic;
+    color: #555;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* Header & Navigation */
+#main-header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed; /* Fixed header */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+#navbar .logo {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin: 0;
+    font-weight: 700;
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+#navbar ul li {
+    margin-left: 25px;
+}
+
+#navbar ul li a {
+    color: #333;
+    padding: 5px 0;
+    position: relative;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+#navbar ul li a:hover {
+    color: #8e44ad;
+}
+
+#navbar ul li a::after { /* Underline effect on hover */
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #8e44ad;
+    transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
+}
+
+#navbar ul li a:hover::after {
+    width: 100%;
+    left: 0;
+    background-color: #8e44ad;
+}
+
+/* Main Content Padding */
+main {
+    padding-top: 70px; /* Adjust based on header height */
+}
+
+/* Hero Section */
+.hero {
+    background: #e9e4f0; /* Light gradient or subtle marble pattern */
+    background: linear-gradient(to right, #e9e4f0, #d3cce3); /* Subtle gradient */
+    /* Optional: Subtle marble background */
+    /* background-image: url('path/to/subtle-marble-texture.png'); */
+    /* background-size: cover; */
+    /* background-position: center center; */
+    color: #333;
+    height: calc(70vh - 70px); /* Adjust height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.hero .cta-buttons a {
+    margin: 0 10px;
+}
+
+/* About Section */
+#about h2, #services h2, #gallery h2, #testimonials h2, #contact h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+}
+
+.about-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Services Section */
+.services-list {
+    list-style: none;
+    padding: 0;
+    max-width: 700px;
+    margin: 20px auto; /* Center the list */
+}
+
+.services-list li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.services-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+
+.services-list i {
+    color: #8e44ad; /* Icon color */
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+/* Gallery Section */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px; /* Fixed height for consistency */
+    object-fit: cover; /* Crop images nicely */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img:hover {
+     transform: scale(1.05);
+     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Testimonials Section */
+.testimonial-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial-item {
+    background: #fff;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border-left: 5px solid #8e44ad; /* Accent border */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.testimonial-item blockquote {
+    font-style: italic;
+    margin-bottom: 1rem;
+    color: #555;
+    border: none;
+    padding: 0;
+}
+
+.testimonial-item p {
+    text-align: right;
+    margin-bottom: 0;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Contact Section */
+#contact .container {
+    max-width: 700px;
+    text-align: center;
+}
+
+.contact-info {
+    margin: 30px 0;
+    font-size: 1.1rem;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #8e44ad; /* Icon color */
+    width: 20px; /* Ensure icons align */
+    text-align: center;
+}
+
+#contact-form {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+#contact-form button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+}
+
+.form-notice {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 15px;
+    text-align: center;
+}
+
+
+/* Footer */
+#main-footer {
+    background-color: #66707a; /* Dark footer */
+    color: #ecf0f1; /* Light text */
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 40px; /* Space before footer */
+    background: #e9e4f0; /* Light gradient or subtle marble pattern */
+    background: linear-gradient(to right, #e9e4f0, #d3cce3); /* Subtle gradient */
+}
+
+#main-footer p {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+#main-footer a {
+    color: #bdc3c7; /* Lighter grey for links */
+}
+#main-footer a:hover {
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+    }
+
+    #navbar .logo {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    #navbar ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    #navbar ul li {
+        margin: 10px 0;
+        margin-left: 0; /* Reset margin */
+    }
+
+     #navbar ul li a::after {
+        display: none; /* Hide underline effect on mobile */
+    }
+
+    main {
+        padding-top: 140px; /* Adjust based on new header height */
+    }
+
+    .hero {
+        height: auto; /* Adjust height for smaller screens */
+        min-height: 50vh;
+        padding: 40px 20px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero .cta-buttons a {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+        max-width: 250px;
+    }
+
+    h2 {
+        font-size: 1.8rem; /* Slightly smaller headings */
+    }
+
+    .section-padding {
+        padding: 40px 0;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+     .gallery-item img {
+        height: 200px;
+     }
+}
+
+@media (max-width: 500px) {
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+     .gallery-item img {
+        height: auto; /* Auto height for single column */
+     }
+}
+
